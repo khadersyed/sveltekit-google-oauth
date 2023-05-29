@@ -1,15 +1,16 @@
-# sveltekit-netlify-google-oauth-example
+# sveltekit-google-oauth
 
-A long-titled repository showing how you could potentially use SvelteKit deployed to Netlify with Google OAuth for authentication. Not the only way or perhaps even the best way, but a way.
+A test repository showing how you could potentially use SvelteKit deployed to S3 with Google OAuth for authentication. Not the only way or perhaps even the best way, but a way.
 
-[Demo](https://svelte-google-oauth-example.netlify.app)
+[Demo](https://tbd.khadersyed.com)
 
 ## Setup
 
-### Local
-
+### Pre-requisites
 - Create [OAuth 2.0 credentials](https://support.google.com/cloud/answer/6158849?hl=en) for your application.
-  - Add an authorized redirect URI entry for `http://localhost:3000/auth/callback`.
+- Add an authorized redirect URI entry for `http://localhost:3000/auth/callback`.
+
+### Local
 - Copy `.env.sample` to `.env`
 - Generate secrets for JWT and cookie signing.
 
@@ -26,13 +27,10 @@ npm install
 npm run dev
 ```
 
-### Netlify
+### S3
 
-- Generate new OAuth 2.0 credentials and secrets for Netlify.
-  - Add a new authorized redirect URI entry for `https://my-netlify-app-name.netlify.app/auth/callback`.
-- Add them to your site's [build deployment environment variables](https://docs.netlify.com/configure-builds/environment-variables/).
-  - Also set `NODE_ENV=production` and `AUTH_REDIRECT=https://my-netlify-app-name.netlify.app/auth/callback`.
-- [Deploy to Netlify](https://docs.netlify.com/site-deploys/create-deploys/).
+- Create your s3 bucket
+- Rest is TBD
 
 ## Acknowledgements
 
@@ -41,6 +39,7 @@ Thanks to a few different articles and authors for inspiration and help.
 - [Sveltekit Authentication](https://blog.hyper.io/sveltekit-authentication/)
 - [Serverless OAuth with Multiple Providers](https://ryanbethel.org/serverless-o-auth-with-multiple-providers)
 - [Creative Tim Tailwind Starter](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
+- [Original code from Duffn](https://github.com/duffn/sveltekit-netlify-google-oauth-example)
 
 ## License
 

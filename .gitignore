@@ -3,6 +3,7 @@
 .vscode
 node_modules
 *.map
+/.svelte-kit
 /src/compiler/compile/internal_exports.ts
 /compiler.d.ts
 /compiler.*js

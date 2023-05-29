@@ -1,19 +1,19 @@
 {
-  "name": "sveltekit-netlify-google-oauth-example",
+  "name": "sveltekit-google-oauth",
   "private": true,
   "author": {
-    "name": "Nicholas Duffy",
+    "name": "Khader Syed",
     "url": "https://github.com/duffn/"
   },
   "repository": {
-    "url": "https://github.com/duffn/sveltekit-netlify-google-oauth-example"
+    "url": "https://github.com/khadersyed/sveltekit-google-oauth"
   },
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev:only": "env-cmd svelte-kit dev",
     "build:only": "npm run tailwind:build && env-cmd svelte-kit build",
-    "build-netlify": "npm run tailwind:build && svelte-kit build",
+    "build-s3": "npm run tailwind:build && svelte-kit build",
     "preview:only": "env-cmd svelte-kit preview",
     "dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
     "tailwind:watch": "TAILWIND_MODE=watch NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
@@ -32,7 +32,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0-next.34",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.3.7",
     "cookie": "^0.4.0",
@@ -41,6 +40,6 @@
     "postcss-cli": "^9.0.1",
     "svelte": "^3.42.6",
     "svelte-preprocess": "^4.9.8",
-    "tailwindcss": "^2.2.17"
+    "tailwindcss": "^2.2.19"
   }
 }
